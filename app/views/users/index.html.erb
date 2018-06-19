@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<%= render "form", user:@user%>
+
+<table id="table-user">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Birthday</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <%= render 'row_user', user: user%>
+    <% end %>
+  </tbody>
+</table>
